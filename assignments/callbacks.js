@@ -27,13 +27,18 @@ function getLength(arr, cb) {
   // getLength passes the length of the array into the callback.
   return cb(arr.length);
 }
-getLength(items, function (len) {
-  console.log(len);
-});
+// getLength(items, function (len) {
+//   console.log(len);
+// });
 
 function last(arr, cb) {
+  let last = arr.length - 1;
   // last passes the last item of the array into the callback.
+  return cb(arr.splice(last, 1));
 }
+last(items, function (lastItem) {
+  console.log(lastItem);
+});
 
 function sumNums(x, y, cb) {
   // sumNums adds two numbers (x, y) and passes the result to the callback.
