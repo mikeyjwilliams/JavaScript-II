@@ -27,8 +27,8 @@ function getLength(arr, cb) {
   // getLength passes the length of the array into the callback.
   return cb(arr.length);
 }
-// getLength(items, function (len) {
-//   console.log(len);
+// getLength(items, function (arrayLength) {
+//   console.log(arrayLength);
 // });
 
 function last(arr, cb) {
@@ -61,13 +61,9 @@ function multiplyNums(x, y, cb) {
 function contains(item, list, cb) {
   // contains checks if an item is present inside of the given array/list.
   // Pass true to the callback if it is, otherwise pass false.
-  if(list.includes(item)) {
-    return cb(true);
-  } else {
-    return cb(false);
-  }
+  return cb(list.includes(item));
 }
-contains('f',['a','b','c'], (contain) => {
+contains('a', ['a', 'b', 'c'], (contain) => {
   console.log(contain);
 })
 
