@@ -67,7 +67,9 @@ function contains(item, list, cb) {
     return cb(false);
   }
 }
-
+contains('f',['a','b','c'], (contain) => {
+  console.log(contain);
+})
 
 /* STRETCH PROBLEM */
 
