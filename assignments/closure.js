@@ -21,8 +21,17 @@ topLevel();
 
 // ==== Challenge 2: Create a counter function ====
 const counter = () => {
+  let count = 0;
+  return function() {
+    let number = ++count;
+    //console.log(number);
+    return number;
+  }
   // Return a function that when invoked increments and returns a counter variable.
 };
+const newCounter = counter();
+newCounter();
+newCounter();
 // Example usage: const newCounter = counter();
 // newCounter(); // 1
 // newCounter(); // 2
