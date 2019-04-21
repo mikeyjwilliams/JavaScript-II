@@ -486,7 +486,9 @@ ticketPriceTotal = runners.reduce(function (startValue, currentval) {
 // Now that you have used .forEach(), .map(), .filter(), and .reduce().  I want you to think of potential problems you could solve given the data set and the 5k fun run theme.  Try to create and then solve 3 unique problems using one or many of the array methods listed above.
 
 // Problem 1
-// email sending list
+/**
+ * email sending list
+ */
 let emailList = [];
 const emaillisting = runners.forEach(emails => { 
     emailList.push(emails.email); 
@@ -494,9 +496,17 @@ const emaillisting = runners.forEach(emails => {
 //console.log(emailList);
 
 // Problem 2
-// filter users of company Kwimbee and Skinix
-let companyUsers = [];
+/**
+ * filter users of company Kwimbee and Skinix with a donation greater than 200.
+*/
+ let companyUsers = [];
 companyUsers = runners.filter(company => company.company_name === 'Kwimbee' || company.company_name === 'Skinix' && company.donation > 200);
-console.log(companyUsers);
+//console.log(companyUsers);
 
 // Problem 3
+/**
+ * map last name with email.
+ */
+let lastNameEmail = [];
+lastNameEmail = runners.map(runner => `${runner.last_name} ${runner.email}`);
+console.log(lastNameEmail);
