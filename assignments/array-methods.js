@@ -494,5 +494,9 @@ const emaillisting = runners.forEach(emails => {
 //console.log(emailList);
 
 // Problem 2
+// filter users of company Kwimbee and Skinix
+let companyUsers = [];
+companyUsers = runners.filter(company => company.company_name === 'Kwimbee' || company.company_name === 'Skinix' && company.donation > 200);
+console.log(companyUsers);
 
 // Problem 3
